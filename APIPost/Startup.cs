@@ -28,8 +28,8 @@ namespace APIPost
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            services.AddDbContext<APIPostContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("APIPostContext")));
+            services.AddDbContext<PostDbContext>(options =>
+            options.UseNpgsql(Configuration.GetConnectionString("PostDbContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

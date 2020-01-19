@@ -8,13 +8,9 @@ namespace APIPost.Models
 {
     public class Post
     {
-        [Key]
         public Guid MessageId { get; set; }
-
-        public Guid UserId { get; set; }
-
+        public Guid? UserId { get; set; }
         public string Message { get; set; }
-
-        public DateTime Date { get; set; }
+        public DateTime? Date { get; set; }
     }
 }
